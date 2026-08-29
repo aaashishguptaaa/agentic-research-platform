@@ -2,8 +2,9 @@ from typing import List, Dict, Any, Optional
 from typing_extensions import TypedDict
 
 class AgentState(TypedDict):
-    """Shared state passed between all AI agents in the graph."""
+    """Shared memory passed across the multi-agent graph."""
     query: str
+    plan: List[str]
     sources: List[Dict[str, str]]
     research_summary: str
     analysis: str
